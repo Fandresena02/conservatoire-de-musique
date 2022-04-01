@@ -5,9 +5,13 @@ function getCours()
 {
     include 'db_connect.php';
     
-    $req = "select * from cours";
+    $req = "select * from cours 
+    inner join professeur on cours.idProfesseur = professeur.id
+    inner join personnes on personnes.id = professeur.id
+    inner join instrument on instrument.id = cours.idInstrument";
     $res = $dbh -> query($req);
-    $data = $res -> fetch(PDO::FETCH_ASSOC);
+    $data = $res -> fetchAll(PDO::FETCH_ASSOC );
     
-    var_dump($data);
+    return ($data);
 }
+?>

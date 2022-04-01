@@ -21,12 +21,18 @@
                     include ("../vues/acceuil.php");
                     break;
                 case 'cours':
-                    getCours();
+                    $lesCours = getCours();
                     include("../vues/voir_cours.php");
                     break;
                 case 'inscriptions':
                     include ("../vues/voir_inscriptions.php");
                     break;
+                case 'inscrire' :
+                    $numero = $_REQUEST['numero'];
+                    include ("../vues/inscrire.php");
+                    break;
+                case  'validerInscription' :
+                    validerInscription();
                 default : 
                     include ("../vues/acceuil.php");
             }

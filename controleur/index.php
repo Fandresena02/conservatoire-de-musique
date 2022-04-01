@@ -25,6 +25,7 @@
                     include("../vues/voir_cours.php");
                     break;
                 case 'inscriptions':
+                    $lesInscriptions = getInscription();
                     include ("../vues/voir_inscriptions.php");
                     break;
                 case 'inscrire' :
@@ -32,7 +33,23 @@
                     include ("../vues/inscrire.php");
                     break;
                 case  'validerInscription' :
-                    validerInscription();
+                    if (isset ($_POST["save"]))
+                    {
+            
+                        $nom = htmlspecialchars(isset($_POST['nom']))? $_POST['nom'] : '' ;
+                        $prenom = htmlspecialchars(isset($_POST['prenom']))? $_POST['prenom'] : '' ;
+                        $tel = htmlspecialchars(isset($_POST['tel']))? $_POST['tel'] : '' ;
+                        $adresse = htmlspecialchars(isset($_POST['adresse']))? $_POST['adresse'] : '' ;
+                        $mail= htmlspecialchars(isset($_POST['mail']))? $_POST['mail'] : '' ;
+                        $numero= htmlspecialchars(isset($_POST['numero']))? $_POST['numero'] : '' ;
+
+                        $tableau = array($nom, $prenom, $tel, $adresse, $mail, $numero);
+
+                    }
+                    validerInscription($tableau);
+
+                    include("../vues/confirmeInscription.php");
+                    break;
                 default : 
                     include ("../vues/acceuil.php");
             }

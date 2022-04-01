@@ -2077,7 +2077,7 @@ input, select, textarea {
 		}
 
 		.homepage #header {
-			height: 35em;
+			height: 18em;
 		}
 
 /* Logo */
@@ -2873,11 +2873,11 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				height: 17em;
+				height: 11em;
 			}
 
 				.homepage #header {
-					height: 20em;
+					height: 11em;
 				}
 
 		/* Logo */

@@ -4,10 +4,11 @@
 
     <input type="hidden" value="<?php echo $numero;?>" name="numero">
 
-    Nom* : <input type="text" name="nom" placeholder = "Entrez votre nom" required> <br> <br>
-    Prénom* : <input type="text" name="prenom" placeholder = "Entrez votre prénom" required> <br><br>
-    Adresse* : <input type="text" name="adresse" placeholder = "Entrez votre adresse" required> <br><br>
-    Mail* : <input type="text" name="mail" placeholder = "Entrez votre mail" required> <br><br>
+    Nom* : <input type="text" name="nom" placeholder = "Entrez le nom" required> <br> <br>
+    Prénom* : <input type="text" name="prenom" placeholder = "Entrez le prénom" required> <br><br>
+    Tel* : <input type="text" name="tel" placeholder = "Entrez le n° tel" required> <br><br>
+    Adresse* : <input type="text" name="adresse" placeholder = "Entrez le adresse" required> <br><br>
+    Mail* : <input type="email" name="mail" placeholder = "Entrez le mail" required> <br><br>
     <input type="submit" name = "save" value="S'inscrire">
 
 </form>

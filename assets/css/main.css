@@ -171,7 +171,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table, blockquote, form {
-		margin-bottom: 2em;
+		margin-bottom: 4em;
 	}
 
 /* Container */
@@ -1453,7 +1453,7 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 3em 0 3em 0;
+		padding: 0em 0 3em 0;
 	}
 
 		header.style1 h2 {
@@ -1487,7 +1487,9 @@ input, select, textarea {
 			}
 
 			table.default td {
+				text-align: center;
 				padding: 0.5em 1em 0.5em 1em;
+				font-size: 16px;
 			}
 
 			table.default th {
@@ -1497,8 +1499,10 @@ input, select, textarea {
 			}
 
 			table.default thead {
+				text-align: center;
 				background: #484d55;
 				color: #fff;
+				font-size: 21px;
 			}
 
 			table.default tfoot {
@@ -2437,7 +2441,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			.wrapper {
-				padding: 4em 0 7em 0;
+				padding: 1em 0 7em 0;
 			}
 
 		/* Logo */
@@ -2467,20 +2471,20 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				padding-bottom: 4em;
+				padding-bottom: 0em;
 			}
 
 				#footer header.style1 {
-					padding-bottom: 4em;
-					margin-bottom: 4em;
+					padding-bottom: 1em;
+					margin-bottom: 2em;
 					border-bottom: solid 1px rgba(255, 255, 255, 0.05);
 				}
 
 		/* Copyright */
 
 			#copyright {
-				padding-top: 4em;
-				margin-top: 4em;
+				padding-top: 2em;
+				margin-top: 2em;
 			}
 
 	}

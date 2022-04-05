@@ -1,5 +1,10 @@
-<center><h1>Voici la liste des inscriptions</h1><hr><br><br>
-<table border>
+<header class="style1">
+							<h2>Voici la liste des inscriptions</h2>
+							<p>
+								Le conservatoire fait pour vous pour monter en compétence
+							</p>
+</header><hr>
+<table class="default">
     <thead>
                <tr>
                    <td>Adhérent</td>
@@ -9,7 +14,6 @@
                    <td>Instrument</td>
                </tr>
     </thead>
-    
     
 <?php
  
@@ -28,6 +32,7 @@
         <?php
     }
 ?>
+
 </table>
-</center>
+
 

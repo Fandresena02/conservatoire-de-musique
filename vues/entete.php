@@ -1,8 +1,10 @@
 
 
+<!--
 <a href="index.php?action=acceuil">Acceuil</a> <br>
 <a href="index.php?action=inscriptions">Voir Inscritptions</a> <br>
 <a href="index.php?action=cours">Voir cours</a><br>
+-->
 
 <!DOCTYPE HTML>
 <!--
@@ -27,14 +29,14 @@
 
 <!-- Logo -->
     <div id="logo">
-        <h1><a href="index.html">Escape Velocity</a></h1>
-        <p>A free responsive site template by HTML5 UP</p>
+        <h1><a href="index.php?action=acceuil">Zik - MU</a></h1>
+        <p>Votre conservatoire de musique</p>
     </div>
 
 <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li class="current"><a href="index.html">Home</a></li>
+            <li class="current"><a href="index.php?action=acceuil">Acceuil</a></li>
             <li>
                 <a href="#">Dropdown</a>
                 <ul>
@@ -54,9 +56,9 @@
                     <li><a href="#">Nisl tempus</a></li>
                 </ul>
             </li>
-            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-            <li><a href="no-sidebar.html">No Sidebar</a></li>
+            <li><a href="index.php?action=inscriptions">Voir inscriptions</a></li>
+            <li><a href="index.php?action=cours">Voir cours</a></li>
+            <!--<li><a href="no-sidebar.html">No Sidebar</a></li>-->
         </ul>
     </nav>
 

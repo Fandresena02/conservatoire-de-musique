@@ -1,5 +1,11 @@
-<center><h1>Voici la liste des cours</h1><hr><br><br>
-<table border>
+<header class="style1">
+							<h2>Voici la liste des cours</h2>
+							<p>
+								Le conservatoire fait pour vous pour monter en compétence
+							</p>
+</header><hr>
+
+<table class="default">
     <thead>
                <tr>
                    <td>Jour/H</td>
@@ -28,4 +34,3 @@
     }
 ?>
 </table>
-</center>

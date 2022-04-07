@@ -1,9 +1,10 @@
 <header class="style1">
-							<h2>Voici la liste des inscriptions</h2>
-							<p>
-								Le conservatoire fait pour vous pour monter en compétence
-							</p>
+	<h2>Voici la liste des inscriptions</h2>
+	<p>
+		Le conservatoire fait pour vous pour monter en compétence
+	</p>
 </header><hr>
+
 <table class="default">
     <thead>
                <tr>
@@ -12,27 +13,32 @@
                    <td>Nb place</td>
                    <td>Professeur</td>
                    <td>Instrument</td>
+                   <td>Pdf</td>
+                   <td>Suppression</td>
                </tr>
     </thead>
     
 <?php
-$i = 0;
-    foreach($lesInscriptions as $uneInscriptions)
-    {
-        ?>
+    $i = 0;
+        foreach($lesInscriptions as $uneInscriptions)
+        {
+            ?>
 
-        <tr>
-            <td><?php echo $uneInscriptions['nomAd']," ", $uneInscriptions['prenomAd'];?></td>
-            <td><?php echo $uneInscriptions['date'];?></td>
-            <td><?php echo $uneInscriptions['place'];?></td>
-            <td><?php echo $uneInscriptions['nomProf']," ", $uneInscriptions['prenomProf'];?></td>
-            <td><?php echo $uneInscriptions['instru'];?></td>
-            <td><?php echo $i;?></td>
-           
-        </tr>
-        <?php
-    $i++;
-    }
+            <tr>
+               
+                <td><?php echo $uneInscriptions['nomAd']," ", $uneInscriptions['prenomAd'];?></td>
+                <td><?php echo $uneInscriptions['date'];?></td>
+                <td><?php echo $uneInscriptions['place'];?></td>
+                <td><?php echo $uneInscriptions['nomProf']," ", $uneInscriptions['prenomProf'];?></td>
+                <td><?php echo $uneInscriptions['instru'];?></td>
+                <td><a href="index.php?action=voirPdf&numeroInscription=<?php echo $i;?>">Voir pdf</a></td>
+                <td><a href="index.php?action=supprimer&numeroInscription=<?php echo $i;?>">Supprimer</a></td>
+                
+            </tr>
+            <?php
+
+            $i++;
+        }
 ?>
 
 </table>

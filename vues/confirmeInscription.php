@@ -5,5 +5,5 @@
       </p>
 </header>
 <?php
-      header('Refresh: 3; index.php?action=acceuil.php');
+     header('Refresh: 3; index.php?action=acceuil.php');
 ?>

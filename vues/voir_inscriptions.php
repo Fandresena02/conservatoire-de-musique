@@ -16,7 +16,7 @@
     </thead>
     
 <?php
- 
+$i = 0;
     foreach($lesInscriptions as $uneInscriptions)
     {
         ?>
@@ -27,9 +27,11 @@
             <td><?php echo $uneInscriptions['place'];?></td>
             <td><?php echo $uneInscriptions['nomProf']," ", $uneInscriptions['prenomProf'];?></td>
             <td><?php echo $uneInscriptions['instru'];?></td>
+            <td><?php echo $i;?></td>
            
         </tr>
         <?php
+    $i++;
     }
 ?>
 

@@ -33,6 +33,7 @@
                     include ("../vues/inscrire.php");
                     break;
                 case  'validerInscription' :
+            try{
                     if (isset ($_POST["save"]))
                     {
             
@@ -47,8 +48,12 @@
 
                     }
                     validerInscription($tableau);
-
                     include("../vues/confirmeInscription.php");
+                    
+                } 
+                    catch (Exception $e){
+                        echo $e -> getMessage();
+                    }                   
                     break;
                 default : 
                     include ("../vues/acceuil.php");

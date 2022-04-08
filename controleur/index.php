@@ -12,22 +12,57 @@ if (!isset($_SESSION["is_loged"]))
 //$is_loged= $_SESSION["is_loged"];
 
 
+    if(!isset($_REQUEST['action']))
+        {
+            if (!isset($_SESSION["id"]))
+            {
+            echo("pas de session");
+            $action = 'connexion';
+            echo $action;
+            }
+             else{
+                $action = 'acceuil';
+                echo ("ya session");
+                echo $action;
+                
+               }
 
-        /*if(!isset($_REQUEST['action']))
-            {    
-                if ($_SESSION["is_loged"] != "true")
+        }else {
+            $action = $_REQUEST['action'];
+
+            if ($action == 'validerConnexion')
                 {
-                    $action ='connexion';
-                } else $action = 'acceuil';
+                    if (isset ($_POST["seconnecter"]))
+                        {
+                            echo ("après if");
+                            $login = htmlspecialchars(isset($_POST['login']))? $_POST['login'] : '' ;
+                            $mdp = htmlspecialchars(isset($_POST['mdp']))? $_POST['mdp'] : '' ;
 
+                            echo $login;
+                            echo $mdp;
+                            $res = seConnecter($login, $mdp);
+
+                            if (!is_array($res))
+                                {
+                                    include("../vues/connexion.php");
+                            } else{
+
+                                $_SESSION['is_loged'] = "true";
+                                //$_SESSION["id"] = $res['id'];
+                                connect($res['id']);
+                                $action = 'acceuil';
+                                    
+                                }
+                        }
+
+                }
             }
             
-            else { */  
-                if (!isset($_SESSION["id"]) || !isset($_REQUEST['action']))
-                {
-                    $action ='connexion';
-                }else  $action = $_REQUEST['action'];
-            //}
+        if (!isset($_SESSION["id"]) && isset($_REQUEST['action']))
+            {
+                $action ='connexion';
+            }
+
            
 
 
@@ -88,7 +123,7 @@ if (!isset($_SESSION["is_loged"]))
                 case 'connexion':
                     include("../vues/connexion.php");
                     break;
-                case 'validerConnexion':
+                /*case 'validerConnexion':
                     echo ("avant if");
                         if (isset ($_POST["seconnecter"]))
                         {
@@ -112,7 +147,7 @@ if (!isset($_SESSION["is_loged"]))
                         }
                         
 
-                    break;
+                    break;*/
                 default : 
                     include ("../vues/acceuil.php");
             }

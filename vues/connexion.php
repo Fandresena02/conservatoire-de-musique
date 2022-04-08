@@ -3,7 +3,7 @@
 </header><br>
 
 <div style="padding: 8%; margin-bottom: 10%; box-shadow: 0px 5px 18px grey; border-radius: 10px; background-color: #E7E7E7">
-<form action="index.php?action=validerConnexion" method = "POST                                         ">
+<form action="index.php?action=validerConnexion" method = "POST">
 
     Identifiant :
         <input type="text" name ="login" placeholder = "Entrez votre identifiant" required> <br>

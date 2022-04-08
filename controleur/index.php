@@ -37,6 +37,15 @@
                     supprimerInscription($num);
                     header('Location: index.php?action=inscriptions');
                     break;
+                case 'voirPdf' :
+                    $lesInscriptions = getInscription();
+                    $num = $_REQUEST['numeroInscription'];
+                    $uneInscription = $lesInscriptions[$num];
+                    var_dump($uneInscription);
+                    include ("../vues/voir_pdf.php");
+
+                    $pdf = creerPdf($uneInscription);
+                    break;
                 case  'validerInscription' :
                     try{
                         if (isset ($_POST["save"]))

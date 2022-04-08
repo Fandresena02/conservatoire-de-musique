@@ -61,7 +61,14 @@ FUNCTION creerPdf($uneInscription)
      $pdf->SetFont('Arial','',13);
      $pdf -> cell(40, 40, 'Voici un recapitulatif de votre inscription:',0, 0, 2);
 
+     $pdf-> Ln();
 
+     $pdf -> SetY(-26);
+     $pdf ->SetLineWidth(0.1);
+     $pdf -> SetTextColor(255,0,0);
+     $pdf -> SetDrawColor(255,0,0);
+     $pdf->SetFont('Courier','BI',10);
+     $pdf ->Cell(180,5,'Vous devez imprimer et ramener ce papier lors de vos cours. A bientot.', 'LTRB', '0', 'C');
     ob_clean();
     $pdf->Output('I','pdf', 'true');
 

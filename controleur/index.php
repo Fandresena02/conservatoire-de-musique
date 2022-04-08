@@ -63,8 +63,6 @@ if (!isset($_SESSION["is_loged"]))
                 $action ='connexion';
             }
 
-           
-
 
         switch ($action)
             {
@@ -92,7 +90,7 @@ if (!isset($_SESSION["is_loged"]))
                     $lesInscriptions = getInscription();
                     $num = $_REQUEST['numeroInscription'];
                     $uneInscription = $lesInscriptions[$num];
-                    var_dump($uneInscription);
+                   // var_dump($uneInscription);
                     include ("../vues/voir_pdf.php");
 
                     $pdf = creerPdf($uneInscription);

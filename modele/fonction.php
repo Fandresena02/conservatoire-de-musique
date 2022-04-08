@@ -1,6 +1,5 @@
 <?php
 
-
 function getCours()
 {
     include 'db_connect.php';
@@ -87,7 +86,7 @@ function getInscription()
 
     $res5 = $dbh -> prepare($req5);
     $res5 -> execute();
-    $data3 = $res5 -> fetchAll(PDO::FETCH_ASSOC );
+    $data3 = $res5 -> fetchAll(PDO::FETCH_ASSOC);
     /*var_dump($data3);*/
     return ($data3);
 }
@@ -107,5 +106,31 @@ function supprimerInscription($num)
     $res8 -> bindParam(1, $lesInscrits[$num]['idC']);
     $res8 -> execute();
 }
+
+function seConnecter($login, $mdp)
+{
+    include 'db_connect.php';
+    $req9 = "select id, count(*) as nb from user where login = ? and mdp =?";
+    $res9 = $dbh -> prepare($req9);
+    $res9 -> bindParam(1,$login);
+    $res9 -> bindParam(2,$mdp);
+    $res9 -> execute();
+    $data4 = $res9-> fetch(PDO::FETCH_ASSOC);
+    /*$nb = $data4['nb'];
+
+    if ($nb > 0)
+    {
+        return "true";
+    }else {
+        return "false";
+    }*/
+    return($data4);
+}
+
+function connect($id)
+{
+    $_SESSION["id"] = $id;
+}
+
 
 ?>

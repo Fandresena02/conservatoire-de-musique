@@ -1,17 +1,33 @@
-
-    <?php
+<?php
+session_start();
         include '../vues/entete.php';
         require '../modele/fonction.php';
  
 
-        if(!isset($_REQUEST['action']))
+if (!isset($_SESSION["is_loged"]))
+{
+    $_SESSION["is_loged"] = "false";
+}
+
+//$is_loged= $_SESSION["is_loged"];
+
+
+
+        /*if(!isset($_REQUEST['action']))
             {    
-                $action = 'accueil';
+                if ($_SESSION["is_loged"] != "true")
+                {
+                    $action ='connexion';
+                } else $action = 'acceuil';
 
-            }else {   
-
-             $action = $_REQUEST['action'];
             }
+            
+            else { */  
+                if (!isset($_SESSION["id"]) || !isset($_REQUEST['action']))
+                {
+                    $action ='connexion';
+                }else  $action = $_REQUEST['action'];
+            //}
            
 
 
@@ -68,6 +84,34 @@
                     catch (Exception $e){
                         echo $e -> getMessage();
                     }                   
+                    break;
+                case 'connexion':
+                    include("../vues/connexion.php");
+                    break;
+                case 'validerConnexion':
+                    echo ("avant if");
+                        if (isset ($_POST["seconnecter"]))
+                        {
+                            echo ("après if");
+                            $login = htmlspecialchars(isset($_POST['login']))? $_POST['login'] : '' ;
+                            $mdp = htmlspecialchars(isset($_POST['mdp']))? $_POST['mdp'] : '' ;
+
+                            echo $login;
+                            echo $mdp;
+                            $res = seConnecter($login, $mdp);
+
+                            if (!is_array($res))
+                                {
+                                    include("../vues/connexion.php");
+                            } else{
+
+                                connect($res['id']);
+                                $action = 'acceuil';
+                                    
+                                }
+                        }
+                        
+
                     break;
                 default : 
                     include ("../vues/acceuil.php");

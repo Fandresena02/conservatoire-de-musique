@@ -89,8 +89,6 @@ function getInscription()
     $res5 -> execute();
     $data3 = $res5 -> fetchAll(PDO::FETCH_ASSOC );
     /*var_dump($data3);*/
-    $num = 0;
-    //echo $data3[$num]['nomAd'];
     return ($data3);
 }
 
@@ -103,6 +101,11 @@ function supprimerInscription($num)
     $res7 -> bindParam(1, $lesInscrits[$num]['idAd']);
     $res7 -> bindParam(2, $lesInscrits[$num]['idC']);
     $res7 -> execute();
+
+    $req8 = "update cours set nbPlace = nbPlace + 1 where id = ?";
+    $res8 = $dbh -> prepare($req8);
+    $res8 -> bindParam(1, $lesInscrits[$num]['idC']);
+    $res8 -> execute();
 }
 
 ?>

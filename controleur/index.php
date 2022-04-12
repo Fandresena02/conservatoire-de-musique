@@ -50,7 +50,8 @@ if (!isset($_SESSION["is_loged"]))
                                 $_SESSION['is_loged'] = "true";
                                 //$_SESSION["id"] = $res['id'];
                                 connect($res['id']);
-                                $action = 'acceuil';
+                                //$action = 'acceuil';
+                                header("Location: index.php?action=acceuil");
                                     
                                 }
                         }
@@ -146,6 +147,11 @@ if (!isset($_SESSION["is_loged"]))
                         
 
                     break;*/
+                    case 'deconnexion':
+                        deconnexion();
+                        $action = 'connexion';
+                        header("Location: index.php");
+                        break;
                 default : 
                     include ("../vues/acceuil.php");
             }

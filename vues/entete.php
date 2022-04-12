@@ -1,5 +1,4 @@
 
-
 <!--
 <a href="index.php?action=acceuil">Acceuil</a> <br>
 <a href="index.php?action=inscriptions">Voir Inscritptions</a> <br>
@@ -37,28 +36,13 @@
     <nav id="nav">
         <ul>
             <li class="current"><a href="index.php?action=acceuil">Acceuil</a></li>
-            <li>
-                <a href="#">Dropdown</a>
-                <ul>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Magna veroeros</a></li>
-                    <li><a href="#">Etiam nisl</a></li>
-                    <li>
-                        <a href="#">Sed consequat</a>
-                        <ul>
-                            <li><a href="#">Lorem dolor</a></li>
-                            <li><a href="#">Amet consequat</a></li>
-                            <li><a href="#">Magna phasellus</a></li>
-                            <li><a href="#">Etiam nisl</a></li>
-                            <li><a href="#">Sed feugiat</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Nisl tempus</a></li>
-                </ul>
-            </li>
             <li><a href="index.php?action=inscriptions">Voir inscriptions</a></li>
             <li><a href="index.php?action=cours">Voir cours</a></li>
-            <!--<li><a href="no-sidebar.html">No Sidebar</a></li>-->
+        <?php 
+        if (isset($_SESSION["id"])){
+        ?>
+            <li><a href="index.php?action=deconnexion">Déconnexion</a></li>
+        <?php } ?>
         </ul>
     </nav>
 

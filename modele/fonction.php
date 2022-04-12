@@ -132,5 +132,11 @@ function connect($id)
     $_SESSION["id"] = $id;
 }
 
+function deconnexion()
+{
+    session_destroy();
+    
+
+}
 
 ?>

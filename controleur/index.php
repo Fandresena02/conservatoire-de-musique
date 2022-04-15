@@ -16,14 +16,14 @@ if (!isset($_SESSION["is_loged"]))
         {
             if (!isset($_SESSION["id"]))
             {
-            echo("pas de session");
-            $action = 'connexion';
-            echo $action;
+                echo("pas de session");
+                $action = 'connexion';
+                echo $action;
             }
              else{
-                $action = 'acceuil';
-                echo ("ya session");
-                echo $action;
+                    $action = 'acceuil';
+                    echo ("ya session");
+                    echo $action;
                 
                }
 
@@ -80,6 +80,7 @@ if (!isset($_SESSION["is_loged"]))
                     break;
                 case 'inscrire' :
                     $numero = $_REQUEST['numero'];
+                    $lesAdherent = getAdherent();
                     include ("../vues/inscrire.php");
                     break;
                 case 'supprimer' :

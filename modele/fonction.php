@@ -139,4 +139,16 @@ function deconnexion()
 
 }
 
+function getAdherent()
+{
+    include 'db_connect.php';
+    $req10 = "select p.nom as nomAdherent, p.prenom as prenomAdherent, p.id as idAdherent from adherent as a 
+    inner join personnes as p on a.id = p.id";
+    $res10 = $dbh -> prepare($req10);
+    $res10 -> execute();
+    $list = $res10 -> fetchAll(PDO::FETCH_ASSOC);
+
+    return ($list);
+}
+
 ?>

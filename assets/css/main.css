@@ -1553,6 +1553,7 @@ input, select, textarea {
 
 	form select {
 		line-height: 1em;
+		font-size: 13pt;
 	}
 
 	form textarea {

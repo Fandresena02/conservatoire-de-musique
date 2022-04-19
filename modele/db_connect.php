@@ -1,5 +1,5 @@
 <?php
-$user = "root";
+$user = "";
 $pass = "";
-$dbh  = new PDO('mysql:host=localhost;dbname=conservatoire', $user, $pass);
+$dbh  = new PDO('mysql:host=localhost;dbname=rfandres_conservatoire', $user, $pass);
 ?>

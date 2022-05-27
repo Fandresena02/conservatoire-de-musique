@@ -31,8 +31,10 @@
                 <td><?php echo $uneInscriptions['place'];?></td>
                 <td><?php echo $uneInscriptions['nomProf']," ", $uneInscriptions['prenomProf'];?></td>
                 <td><?php echo $uneInscriptions['instru'];?></td>
-                <td><a href="index.php?action=voirPdf&numeroInscription=<?php echo $i;?>">Voir pdf</a></td>
-                <td><a href="index.php?action=supprimer&numeroInscription=<?php echo $i;?>">Supprimer</a></td>
+                <td><a href="index.php?action=voirPdf&numeroInscription=<?php echo $i;?>">
+                    <img src="../images/pdf.png" alt="Voir pdf" style="width : 25px; height : 30px;"></a></td>
+                <td><a href="index.php?action=supprimer&numeroInscription=<?php echo $i;?>">
+                    <img src="../images/supp.png" alt="supprimer" style="width : 30px; height : 30px;"></a></td>
                 
             </tr>
             <?php

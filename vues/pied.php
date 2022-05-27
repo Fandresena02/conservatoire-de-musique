@@ -3,51 +3,25 @@
 				
 					<div class="container">
 						<header class="style1">
-							<h2>Ipsum sapien elementum portitor?</h2>
+							<h2>Zik-Mu</h2>
 							<p>
-								Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-								Nam pharetra laoreet imperdiet volutpat etiam feugiat.
+								Le conservatoire de musique pour tous
 							</p>
 						</header>
 						<div class="row">
-							<div class="col-6 col-12-medium">
-
-								<!-- Contact Form -->
-									<section>
-										<form method="post" action="#">
-											<div class="row gtr-50">
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="email" id="contact-email" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
+							<div class="col-2 col-12-medium">
 							</div>
-							<div class="col-6 col-12-medium">
+							<div class="col-10 col-12-medium">
 
 								<!-- Contact -->
 									<section class="feature-list small">
 										<div class="row">
 											<div class="col-6 col-12-small">
 												<section>
-													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<h3 class="icon solid fa-home">Siège social</h3>
 													<p>
-														Untitled Corp<br />
-														1234 Somewhere Rd<br />
-														Nashville, TN 00000
+													209 Avenue Jean Camille<br />
+													75019 Paris
 													</p>
 												</section>
 											</div>
@@ -55,9 +29,8 @@
 												<section>
 													<h3 class="icon solid fa-comment">Social</h3>
 													<p>
-														<a href="#">@untitled-corp</a><br />
-														<a href="#">linkedin.com/untitled</a><br />
-														<a href="#">facebook.com/untitled</a>
+														<a href="#">linkedin.com</a><br />
+														<a href="#">facebook.com</a>
 													</p>
 												</section>
 											</div>
@@ -65,7 +38,7 @@
 												<section>
 													<h3 class="icon solid fa-envelope">Email</h3>
 													<p>
-														<a href="#">info@untitled.tld</a>
+														conservatoire.zikmu@gmail.com
 													</p>
 												</section>
 											</div>
@@ -73,7 +46,7 @@
 												<section>
 													<h3 class="icon solid fa-phone">Phone</h3>
 													<p>
-														(000) 555-0000
+													09 45 49 69 10
 													</p>
 												</section>
 											</div>

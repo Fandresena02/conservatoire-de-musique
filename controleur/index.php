@@ -16,13 +16,11 @@ if (!isset($_SESSION["is_loged"]))
         {
             if (!isset($_SESSION["id"]))
             {
-                echo("pas de session");
                 $action = 'connexion';
                 echo $action;
             }
              else{
                     $action = 'acceuil';
-                    echo ("ya session");
                     echo $action;
                 
                }
@@ -34,12 +32,9 @@ if (!isset($_SESSION["is_loged"]))
                 {
                     if (isset ($_POST["seconnecter"]))
                         {
-                            echo ("après if");
                             $login = htmlspecialchars(isset($_POST['login']))? $_POST['login'] : '' ;
                             $mdp = htmlspecialchars(isset($_POST['mdp']))? $_POST['mdp'] : '' ;
 
-                            echo $login;
-                            echo $mdp;
                             $res = seConnecter($login, $mdp);
 
                             if (!is_array($res))

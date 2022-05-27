@@ -17,12 +17,9 @@ if (!isset($_SESSION["is_loged"]))
             if (!isset($_SESSION["id"]))
             {
                 $action = 'connexion';
-                echo $action;
             }
              else{
-                    $action = 'acceuil';
-                    echo $action;
-                
+                    $action = 'acceuil';                
                }
 
         }else {

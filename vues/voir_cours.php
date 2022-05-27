@@ -24,11 +24,14 @@
         ?>
 
         <tr>
-            <td><?php echo $list_Cours['jourHeure'];?></td>
-            <td><?php echo $list_Cours['nbPlace'];?></td>
-            <td><?php echo $list_Cours['nom']," ", $list_Cours['prenom'];?></td>
-            <td><?php echo $list_Cours['nomInstru'];?></td>
-            <td><a href="index.php?action=inscrire&numero=<?php echo $list_Cours['id'];?>">S'inscrire</a></td>
+            <center>
+                <td><?php echo $list_Cours['jourHeure'];?></td>
+                <td><?php echo $list_Cours['nbPlace'];?></td>
+                <td><?php echo $list_Cours['nom']," ", $list_Cours['prenom'];?></td>
+                <td><?php echo $list_Cours['nomInstru'];?></td>
+                <td><a href="index.php?action=inscrire&numero=<?php echo $list_Cours['id'];?>">
+                <img src="../images/inscription.png" alt="S'inscrire" style="width : 100px; height : 35px;"></a></td>
+            </center>
         </tr>
         <?php
     }

@@ -1,7 +1,8 @@
 <br>
 <div class="container">
     <div class="row">
-            <div class="col-7 col-12-medium">
+    <div class="col-3 col-12-medium"></div>
+            <div class="col-6 col-12-medium">
                 <div style="padding: 8%; margin-bottom: 10%; box-shadow: 25px 30px 18px grey; border-radius: 10px; background-color: #E7E7E7">
 
                     <form action="index.php?action=validerInscription" method = "post">
@@ -25,29 +26,7 @@
                 </div>
             </div>
 
-            <div class="col-5 col-12-medium">
-
-                        <div style="padding: 8%; margin-bottom: 10%; box-shadow: 25px 30px 18px grey; border-radius: 10px; background-color: #E7E7E7">
-                            <header class="style1">
-                                <h2>Déjà inscrit?</h2>
-                            </header>
-                            <form action="index.php?action=validerInscription" method = "post">
-                                <select name="inscription">
-                                    <?php foreach($lesAdherent as $unAdherent) 
-                                            {
-                                        ?>
-                                    
-                                    <option value="<?php echo $unAdherent['idAdherent'];?>"><?php echo $unAdherent['idAdherent'],"- ",$unAdherent['nomAdherent']," ",$unAdherent['prenomAdherent'];?></option>
-                                    
-                                    <?php
-                                                } 
-                                    ?>
-                                </select>
-                                <br><br>
-                                <center><input type="submit" name = "sauvegarde" value="S'inscrire"></center>
-                            </form>
-                        </div>
-            </div>
+            
     </div>
 </div>
 

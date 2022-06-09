@@ -57,7 +57,7 @@
 						</div>
 						<div id="copyright">
 							<ul>
-								<li>&copy; 2021-2022.</li><li>Design: <a href="index.php?action=acceuil">Fandresena RAKOTOMAHEFA</a></li>
+								<li>&copy; 2021-2022.</li><li>Design: <a href="index.php?action=accueil">Fandresena RAKOTOMAHEFA</a></li>
 							</ul>
 						</div>
 					</div>

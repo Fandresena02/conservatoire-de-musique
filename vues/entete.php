@@ -28,7 +28,7 @@
 
 <!-- Logo -->
     <div id="logo">
-        <h1><a href="index.php?action=acceuil">Zik - MU</a></h1>
+        <h1><a href="index.php?action=accueil">Zik - MU</a></h1>
         <p>Votre conservatoire de musique</p>
     </div>
 

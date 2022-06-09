@@ -19,7 +19,7 @@ if (!isset($_SESSION["is_loged"]))
                 $action = 'connexion';
             }
              else{
-                    $action = 'acceuil';                
+                    $action = 'accueil';                
                }
 
         }else {
@@ -43,7 +43,7 @@ if (!isset($_SESSION["is_loged"]))
                                 //$_SESSION["id"] = $res['id'];
                                 connect($res['id']);
                                 //$action = 'acceuil';
-                                header("Location: index.php?action=acceuil");
+                                header("Location: index.php?action=accueil");
                                     
                                 }
                         }
@@ -59,8 +59,8 @@ if (!isset($_SESSION["is_loged"]))
 
         switch ($action)
             {
-                case 'acceuil':
-                    include ("../vues/acceuil.php");
+                case 'accueil':
+                    include ("../vues/accueil.php");
                     break;
                 case 'cours':
                     $lesCours = getCours();
@@ -146,7 +146,7 @@ if (!isset($_SESSION["is_loged"]))
                         header("Location: index.php");
                         break;
                 default : 
-                    include ("../vues/acceuil.php");
+                    include ("../vues/accueil.php");
             }
         include '../vues/pied.php';
     ?>

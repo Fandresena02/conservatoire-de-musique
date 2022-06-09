@@ -35,7 +35,7 @@
 <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li class="current"><a href="index.php?action=acceuil">Acceuil</a></li>
+            <li class="current"><a href="index.php?action=accueil">Accueil</a></li>
             <li><a href="index.php?action=inscriptions">Voir inscriptions</a></li>
             <li><a href="index.php?action=cours">Voir cours</a></li>
         <?php 

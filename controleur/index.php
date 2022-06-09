@@ -85,7 +85,10 @@ if (!isset($_SESSION["is_loged"]))
                     $num = $_REQUEST['numeroInscription'];
                     $uneInscription = $lesInscriptions[$num];
                    // var_dump($uneInscription);
-                    include ("../vues/voir_pdf.php");
+                   if (is_array($uneInscription))
+                   {
+                        include ("../vues/voir_pdf.php");
+                    }else { header('Location: index.php?action=inscriptions');  }
 
                     $pdf = creerPdf($uneInscription);
                     break;

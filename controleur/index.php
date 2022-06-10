@@ -11,7 +11,6 @@ if (!isset($_SESSION["is_loged"]))
 
 //$is_loged= $_SESSION["is_loged"];
 
-
     if(!isset($_REQUEST['action']))
         {
             if (!isset($_SESSION["id"]))
